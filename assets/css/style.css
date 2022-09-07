@@ -15,18 +15,8 @@ body {
     font-family: var(--font-secondary);
 }
 
-button {
-    cursor: pointer;
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 1.25rem;
-    border: none;
-}
-
 footer {
     font-family: var(--font-tertiary);
-    font-size: 14px;
     text-align: center;
     color: #BDBDBD;
 }
@@ -41,50 +31,54 @@ img {
     width: 90%;
     height: 100%;
     object-fit: scale-down;
+    padding: 0 1rem 1rem 0;
+}
+
+p {
+    font-size: 18px;
 }
 
 /** Selector (Class) */
-.btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-}
-
 .container {
     margin: 2rem 3rem;
-}
-
-.content {
-    gap: 1rem;
 }
 
 .d-flex {
     display: flex;
 }
 
-.d-grid {
+.g-5 {
+    gap: 3rem;
+}
+
+.grid__container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .header {
+    font-size: 36px;
     font-family: var(--font-primary);
-    text-transform: uppercase;
 }
 
-.information__description {
-    font-size: 24px;
-    color: var(--color-tertiary);
-}
-
-.information__title {
-    font-size: 64px;
-}
-
-.mt-5 {
+.mt-5,
+.team:nth-child(2),
+.team:nth-child(5) {
     margin-top: 3rem;
 }
 
-.place-items-start {
-    place-items: start;
+.title {
+    width: 50%;
+}
+
+.position {
+    font-family: var(--font-primary);
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
 }
 
 .username {
@@ -94,20 +88,15 @@ img {
 
 /** Pseudo-classes */
 :root {
-    --font-primary: 'Inconsolata', monospace;
-    --font-secondary: 'Space Mono', monospace;
+    --font-primary: 'PT Serif', serif;
+    --font-secondary: 'Poppins', sans-serif;
     --font-tertiary: 'Montserrat', sans-serif;
-    --color-primary: #333333;
+    --color-primary: #000000;
     --color-secondary: #FFFFFF;
-    --color-tertiary: #4F4F4F;
 }
 
 a:hover {
     color: initial;
-}
-
-button:hover {
-    filter: brightness(110%);
 }
 
 /** Pseudo-elements */
@@ -132,6 +121,7 @@ button:hover {
 
 /*! Mobile Mode View */
 @media screen and (max-width: 768px) {
+
     /** Page Structures */
     img {
         width: 100%;
@@ -142,15 +132,24 @@ button:hover {
         margin: 1rem;
     }
 
-    .content {
+    .flex-col {
         flex-direction: column;
     }
 
-    .information__description {
-        font-size: 18px;
+    .grid__container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .information__title {
-        font-size: 48px;
+    .team:nth-child(5) {
+        margin-top: unset;
+    }
+
+    .team:nth-child(even) {
+        margin-top: 3rem;
+        margin-right: 1.5rem;
+    }
+
+    .title {
+        width: unset;
     }
 }
