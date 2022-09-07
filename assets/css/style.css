@@ -18,7 +18,7 @@ body {
 footer {
     font-family: var(--font-tertiary);
     text-align: center;
-    color: #BDBDBD;
+    color: var(--footer);
 }
 
 html {
@@ -93,6 +93,7 @@ p {
     --font-tertiary: 'Montserrat', sans-serif;
     --color-primary: #000000;
     --color-secondary: #FFFFFF;
+    --footer: #BDBDBD;
 }
 
 a:hover {
